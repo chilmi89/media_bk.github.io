@@ -1,0 +1,54 @@
+/* Custom styles to complement Tailwind CSS */
+.materi-card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300;
+}
+
+.materi-card:hover {
+    @apply transform -translate-y-1 shadow-lg;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Form input focus styles */
+input:focus, textarea:focus, select:focus {
+    @apply outline-none ring-2 ring-blue-500;
+}
+
+/* Button hover animation */
+button {
+    @apply transition-all duration-300;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-blue-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-blue-600;
+}
+
+/* Navigation link hover effect */
+nav a {
+    @apply relative;
+}
+
+nav a::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-blue-200 transition-all duration-300;
+}
+
+nav a:hover::after {
+    @apply w-full;
+}
